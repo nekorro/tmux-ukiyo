@@ -21,7 +21,7 @@ render() {
 
   # Normalize legacy values
   case "$current_theme" in
-  wave | dragon | lotus)
+  wave | dragon | lotus | paper-dark)
     current_theme="kanagawa/$current_theme"
     ;;
   esac
@@ -54,6 +54,7 @@ render() {
   local k_wave=$(mark_if_active "$current_theme" "kanagawa/wave" "Wave")
   local k_dragon=$(mark_if_active "$current_theme" "kanagawa/dragon" "Dragon")
   local k_lotus=$(mark_if_active "$current_theme" "kanagawa/lotus" "Lotus")
+  local k_paper_dark=$(mark_if_active "$current_theme" "kanagawa/paper-dark" "Paper Dark")
 
   # Tokyo Night variants
   local t_moon=$(mark_if_active "$current_theme" "tokyonight/moon" "Moon")
@@ -100,6 +101,7 @@ render() {
     "$k_wave" 1 "run -b '#{@ukiyo-root}/scripts/actions.sh set_state_and_tmux_option theme kanagawa/wave'" \
     "$k_dragon" 2 "run -b '#{@ukiyo-root}/scripts/actions.sh set_state_and_tmux_option theme kanagawa/dragon'" \
     "$k_lotus" 3 "run -b '#{@ukiyo-root}/scripts/actions.sh set_state_and_tmux_option theme kanagawa/lotus'" \
+    "$k_paper_dark" 4 "run -b '#{@ukiyo-root}/scripts/actions.sh set_state_and_tmux_option theme kanagawa/paper-dark'" \
     "" \
     "#[align=centre]─── Tokyo Night ───" "" "" \
     "$t_moon" 4 "run -b '#{@ukiyo-root}/scripts/actions.sh set_state_and_tmux_option theme tokyonight/moon'" \

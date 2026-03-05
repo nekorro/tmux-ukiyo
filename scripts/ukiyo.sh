@@ -24,7 +24,7 @@ main() {
   elif [ -n "$theme_option" ]; then
     # Check if it's a known variant of kanagawa (backward compat)
     case "$theme_option" in
-    wave | dragon | lotus)
+    wave | dragon | lotus | paper-dark)
       theme="kanagawa"
       variant="$theme_option"
       ;;
